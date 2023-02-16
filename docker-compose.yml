@@ -29,7 +29,7 @@ services:
         - traefik.http.routers.versioning-parchmentmc-org-https.service=versioning-parchmentmc-org
         - traefik.http.routers.versioning-parchmentmc-org-https.tls.certresolver=le
         - traefik.http.services.versioning-parchmentmc-org.loadbalancer.server.port=80
-        - traefik.http.services.versioning-parchmentmc-org.loadBalancer.sticky.cookie.name=ldtteam-routing_minecolonies-wiki
+        - traefik.http.services.versioning-parchmentmc-org.loadBalancer.sticky.cookie.name=parchment-versioning
         - traefik.http.services.versioning-parchmentmc-org.loadBalancer.sticky.cookie.secure=true
         - traefik.http.services.versioning-parchmentmc-org.loadBalancer.sticky.cookie.httpOnly=true
         - traefik.http.services.versioning-parchmentmc-org.loadBalancer.sticky.cookie.sameSite=none
@@ -42,7 +42,7 @@ services:
         - traefik.http.routers.versioning-parchmentmc-net-https.service=versioning-parchmentmc-net
         - traefik.http.routers.versioning-parchmentmc-net-https.tls.certresolver=le
         - traefik.http.services.versioning-parchmentmc-net.loadbalancer.server.port=80
-        - traefik.http.services.versioning-parchmentmc-net.loadBalancer.sticky.cookie.name=ldtteam-routing_minecolonies-wiki
+        - traefik.http.services.versioning-parchmentmc-net.loadBalancer.sticky.cookie.name=parchment-versioning
         - traefik.http.services.versioning-parchmentmc-net.loadBalancer.sticky.cookie.secure=true
         - traefik.http.services.versioning-parchmentmc-net.loadBalancer.sticky.cookie.httpOnly=true
         - traefik.http.services.versioning-parchmentmc-net.loadBalancer.sticky.cookie.sameSite=none
