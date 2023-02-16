@@ -12,4 +12,5 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /App
 COPY --from=build-env /App/out .
+ENV ASPNETCORE_SERVER_URLS="http://0.0.0.0:80"
 ENTRYPOINT ["dotnet", "SmithingTable.dll"]
