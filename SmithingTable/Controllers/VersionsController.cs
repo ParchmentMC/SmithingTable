@@ -19,7 +19,7 @@ public class VersionsController : ControllerBase
         _versionService = versionService;
     }
 
-    [HttpGet(Name = "Versions")]
+    [HttpGet]
     public VersionInformation Versions()
     {
         var versions = _versionService.GetVersions();
