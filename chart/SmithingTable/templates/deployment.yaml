@@ -67,7 +67,7 @@ spec:
         whenUnsatisfiable: DoNotSchedule
         labelSelector:
           matchLabels:
-            { { - include "SmithingTable.selectorLabels" . | nindent 12 } }
+            {{- include "SmithingTable.selectorLabels" $ | nindent 12 }}
       {{- end }}
       {{- end }}
       
