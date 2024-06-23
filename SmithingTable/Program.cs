@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.HttpLogging;
+using SmithingTable.HealthChecks;
 using SmithingTable.Services;
 using SmithingTable.Worker;
 
@@ -9,22 +10,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
+builder.Services.AddSingleton<IParchmentVersionUpdater, ParchmentVersionUpdater>();
 builder.Services.AddSingleton<IParchmentVersionService, ParchmentVersionService>();
 builder.Services.AddHostedService<ParchmentVersionRetrievalWorker>();
 builder.Services.AddHttpLogging(logging => { logging.LoggingFields = HttpLoggingFields.RequestPath | HttpLoggingFields.ResponseStatusCode ; });
+builder.Services.AddHealthChecks()
+    .AddCheck<ParchmentVersionUpdaterHealthCheck>("Maven");
 
 var app = builder.Build();
 
 app.UseHttpLogging();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
 app.UseCors(x => x
     .AllowAnyMethod()
@@ -32,10 +28,7 @@ app.UseCors(x => x
     .SetIsOriginAllowed(origin => true) // allow any origin
     .AllowCredentials()); // allow credentials
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
 app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();
