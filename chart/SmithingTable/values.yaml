@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: container.ldtteam.com/parchmentmc/smithingtable
+  repository: harbor.cluster.ldtteam.com/parchmentmc/smithingtable
   pullPolicy: IfNotPresent
   tag: latest
 
