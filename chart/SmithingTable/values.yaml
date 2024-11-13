@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: harbor.cluster.ldtteam.com/parchmentmc/smithingtable
+  repository: ghrc.io/parchmentmc/smithingtable
   pullPolicy: IfNotPresent
-  tag: latest
+  #tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
