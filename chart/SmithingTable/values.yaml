@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: ghrc.io/parchmentmc/smithingtable
+  repository: ghcr.io/parchmentmc/smithingtable
   pullPolicy: IfNotPresent
   #tag: latest
 
