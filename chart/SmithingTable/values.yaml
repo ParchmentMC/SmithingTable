@@ -28,7 +28,9 @@ ingress:
   enabled: true
   className: nginx
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-production
+    cert-manager.io/cluster-issuer: letsencrypt-parchment
+    kubernetes.io/ingress.class: nginx
+    external-dns.alpha.kubernetes.io/target: "cluster.ldtteam.com."
   hosts:
     - versioning.parchmentmc.org
     - versioning.parchmentmc.net
