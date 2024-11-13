@@ -3,6 +3,16 @@ entries:
   smithing-table:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-13T14:19:40.246612358Z"
+    description: A helm chart that deploys Parchments versioning API
+    digest: 0a24eaa965f71c5575507956e4b51e6c41ffe82bfd3b9d65627fdb2b131de3e6
+    name: smithing-table
+    type: application
+    urls:
+    - https://github.com/ParchmentMC/SmithingTable/releases/download/smithing-table-v0.0.5/smithing-table-v0.0.5.tgz
+    version: v0.0.5
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-13T14:11:55.028565465Z"
     description: A helm chart that deploys Parchments versioning API
     digest: cd499e8e10fa0fb62c2698a8b46aeb444583c717f16d4a77fde780f975365fa6
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/ParchmentMC/SmithingTable/releases/download/smithing-table-v0.0.4/smithing-table-v0.0.4.tgz
     version: v0.0.4
-generated: "2024-11-13T14:11:55.028576275Z"
+generated: "2024-11-13T14:19:40.246635148Z"
