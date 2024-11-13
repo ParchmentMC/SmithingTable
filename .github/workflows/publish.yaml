@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./SmithingTable
-          file: Dockerfile
+          file: ./SmithingTable/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ env.IMAGE_PATH }}:${{ needs.tag.outputs.tag }}
           labels: ${{ steps.meta.outputs.labels }}
