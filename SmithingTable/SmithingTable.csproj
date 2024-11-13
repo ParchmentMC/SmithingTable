@@ -13,4 +13,9 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.10.0-beta.1" />
+      <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.10.0" />
+    </ItemGroup>
+
 </Project>
