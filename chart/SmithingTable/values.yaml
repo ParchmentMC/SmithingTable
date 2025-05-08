@@ -40,7 +40,13 @@ ingress:
         - versioning.parchmentmc.org
         - versioning.parchmentmc.net
 
-resources: {}
+resources:
+  limits:
+    cpu: 100m
+    memory: 512Mi
+  requests:
+    cpu: 10m
+    memory: 256Mi
 
 autoscaling:
   enabled: true
